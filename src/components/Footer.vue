@@ -2,7 +2,7 @@
   <footer id="footer">
     <div class="container">
       <h2 class="subtitle has-text-centered">
-        Made with ❤ by <a href="https://github.com/joaomarcuslf">@joaomarcuslf</a>
+        {{ $t("message.madeBy") }} <a href="https://github.com/joaomarcuslf">@joaomarcuslf</a>
       </h2>
     </div>
   </footer>

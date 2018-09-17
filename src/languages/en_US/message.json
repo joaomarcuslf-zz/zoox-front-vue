@@ -1,0 +1,11 @@
+{
+  "hello": "Hello!",
+  "updateTime": "Last Updated",
+  "name": "Name",
+  "abbr": "Shorthand",
+  "add": "Add",
+  "update": "Update",
+  "filterBy": "Filter By",
+  "confirmationTitle": "Confirmation",
+  "removalConfirmation": "Are you sure you want to Remove?"
+}
