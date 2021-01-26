@@ -3,12 +3,12 @@
     <div class="card-content">
       <div class="content">
         <h2>{{cidade.nome}}</h2>
-        Data de Atualização: <time datetime="2016-1-1">{{formatDate(cidade.dataDeAtualizacao)}}</time>
+        {{ $t("message.updateText") }}: <time datetime="2016-1-1">{{formatDate(cidade.dataDeAtualizacao)}}</time>
       </div>
     </div>
     <footer class="card-footer">
-      <a href="#" class="card-footer-item" v-on:click="toogleModal()">Editar</a>
-      <a href="#" class="card-footer-item" v-on:click="toogleDelete()">Delete</a>
+      <a href="#" class="card-footer-item" v-on:click="toogleModal()">{{ $t("buttons.edit") }}</a>
+      <a href="#" class="card-footer-item" v-on:click="toogleDelete()">{{ $t("buttons.delete") }}</a>
     </footer>
 
     <CidadeForm
@@ -52,9 +52,9 @@ export default {
     toogleDelete: function() {
       this.showDelete = !this.showDelete;
     },
-    formatDate: function(date) {
+    formatDate: function(format, date) {
       return moment(date)
-        .format('D [de] MMMM, YYYY [às] h:mm')
+        .format(this.$t("date.format"))
         .toString();
     },
     onSubmitDelete: function() {

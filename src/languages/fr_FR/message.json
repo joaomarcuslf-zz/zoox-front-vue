@@ -1,0 +1,11 @@
+{
+  "hello": "Bonjour!",
+  "updateTime": "Dernière mise à jour",
+  "name": "Prénom",
+  "abbr": "Sténographie",
+  "add": "Ajouter",
+  "update": "Mettre à jour",
+  "filterBy": "Filtrer par",
+  "confirmationTitle": "Confirmation",
+  "removalConfirmation": "Êtes-vous sûr de vouloir désinstaller?"
+}

@@ -3,13 +3,13 @@
     <div class="card-content">
       <div class="content">
         <h2>{{estado.nome}} - {{estado.abreviacao}}</h2>
-        Data de Atualização: <time datetime="2016-1-1">{{formatDate(estado.dataDeAtualizacao)}}</time>
+        {{ $t("message.updateTime") }}: <time datetime="2016-1-1">{{formatDate(estado.dataDeAtualizacao)}}</time>
       </div>
     </div>
     <footer class="card-footer">
-      <a v-bind:href="estado._id" class="card-footer-item">Ampliar</a>
-      <a href="#" class="card-footer-item" v-on:click="toogleModal()">Editar</a>
-      <a href="#" class="card-footer-item" v-on:click="toogleDelete()">Delete</a>
+      <a v-bind:href="estado._id" class="card-footer-item">{{ $t("buttons.zoom") }}</a>
+      <a href="#" class="card-footer-item" v-on:click="toogleModal()">{{ $t("buttons.edit") }}</a>
+      <a href="#" class="card-footer-item" v-on:click="toogleDelete()">{{ $t("buttons.delete") }}</a>
     </footer>
 
     <EstadoForm
@@ -55,7 +55,7 @@ export default {
     },
     formatDate: function(date) {
       return moment(date)
-        .format('D [de] MMMM, YYYY [às] h:mm')
+        .format(this.$t("date.format"))
         .toString();
     },
     onSubmitDelete: function() {

@@ -3,7 +3,7 @@
     <div v-if="!loading" class="estado-list-title card">
       <div class="card-content">
         <div class="content">
-          <h2>Lista de Estados</h2>
+          <h2>{{ $t("buttons.list") }}</h2>
         </div>
 
         <SelectedFilters
@@ -12,8 +12,8 @@
         />
       </div>
       <footer class="card-footer">
-        <a href="#" class="card-footer-item" v-on:click="toogleAddForm()">Adicionar</a>
-        <a href="#" class="card-footer-item" v-on:click="toogleAggregationModal()">Refinar</a>
+        <a href="#" class="card-footer-item" v-on:click="toogleAddForm()">{{ $t("buttons.add") }}</a>
+        <a href="#" class="card-footer-item" v-on:click="toogleAggregationModal()">{{ $t("buttons.filter") }}</a>
       </footer>
     </div>
 
@@ -32,7 +32,7 @@
       <a
         v-on:click="fetchEstados()"
         class="button is-large is-fullwidth is-link">
-          Recarregar Estados
+          {{ $t("buttons.refreshStates") }}
       </a>
     </div>
 
@@ -57,6 +57,7 @@
 </template>
 
 <script>
+import Vue from 'vue';
 import EstadoListView from '@/components/EstadoListView.vue';
 import EstadoForm from '@/components/EstadoForm.vue';
 import ErrorNotification from '@/components/ErrorNotification.vue';
@@ -91,6 +92,15 @@ export default {
     AggregationModal,
     Loading,
     SelectedFilters,
+  },
+  i18n: {
+    messages: {
+      pt: {
+        buttons: {
+          list: "Listar Estado",
+        }
+      }
+    }
   },
   methods: {
     resetState: function() {

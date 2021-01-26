@@ -7,7 +7,7 @@
     </p>
 
     <div v-if="errorObj.invalidFields">
-      Campos inválidos:
+      {{ $t("errors.invalidFields") }}:
       <ul v-for="fields in errorObj.invalidFields" v-bind:key="fields">
         <li>{{fields}}</li>
       </ul>

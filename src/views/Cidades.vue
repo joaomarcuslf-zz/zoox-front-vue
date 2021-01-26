@@ -3,7 +3,7 @@
     <div v-if="!loading" class="cidade-list-title card">
       <div class="card-content">
         <div class="content">
-          <h2>Lista de Cidades</h2>
+          <h2>{{ $t("message.list") }}</h2>
         </div>
 
         <SelectedFilters
@@ -12,8 +12,8 @@
         />
       </div>
       <footer class="card-footer">
-        <a href="#" class="card-footer-item" v-on:click="toogleAddForm()">Adicionar</a>
-        <a href="#" class="card-footer-item" v-on:click="toogleAggregationModal()">Refinar</a>
+        <a href="#" class="card-footer-item" v-on:click="toogleAddForm()">{{ $t("buttons.add") }}</a>
+        <a href="#" class="card-footer-item" v-on:click="toogleAggregationModal()">{{ $t("buttons.filter") }}</a>
       </footer>
     </div>
 
@@ -32,7 +32,7 @@
       <a
         v-on:click="fetchCidades()"
         class="button is-large is-fullwidth is-link">
-          Recarregar Cidades
+          {{ $t("buttons.refreshCities") }}
       </a>
     </div>
 

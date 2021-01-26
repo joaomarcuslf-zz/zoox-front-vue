@@ -3,15 +3,15 @@
     <div class="modal-background"></div>
     <div class="modal-card">
       <header class="modal-card-head">
-        <p class="modal-card-title"> Confirmação </p>
+        <p class="modal-card-title"> {{ $t("message.confirmationTitle") }} </p>
       </header>
 
       <section class="modal-card-body">
-        <h2>Tem certeza que deseja remover esse item?</h2>
+        <h2>{{ $t("message.removalConfirmation") }}</h2>
 
         <br />
         <div class="control">
-          <a href="#" class="button is-fullwidth is-danger" @click="onSubmit()">Enviar</a>
+          <a href="#" class="button is-fullwidth is-danger" @click="onSubmit()">{{ $t("buttons.send") }}</a>
         </div>
       </section>
       <br />
